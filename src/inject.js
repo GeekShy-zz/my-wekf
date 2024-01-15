@@ -1,6 +1,7 @@
 import _ from './underscore.m.js';
 
-export function inject(ctx, name, val) {
+export default function(ctx, name, val) {
+  if (name === _.noop()) throw new Error('注入不能为空');
   if (!_.isObject(name)) {
     let key = name;
     name = {};
@@ -11,5 +12,4 @@ export function inject(ctx, name, val) {
       ctx[key] = value
     }
   });
-  
 }
