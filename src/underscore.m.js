@@ -1169,11 +1169,11 @@ _.each(['Arguments', 'Function', 'String', 'Number', 'Date', 'RegExp', 'Error'],
 
 // Define a fallback version of the method in browsers (ahem, IE < 9), where
 // there isn't any inspectable "Arguments" type.
-if (!_.isArguments(arguments)) {
-  _.isArguments = function(obj) {
-    return _.has(obj, 'callee');
-  };
-}
+// if (!_.isArguments(arguments)) {
+//   _.isArguments = function(obj) {
+//     return _.has(obj, 'callee');
+//   };
+// }
 
 // Optimize `isFunction` if appropriate. Work around an IE 11 bug (#1621).
 // Work around a Safari 8 bug (#1929)
