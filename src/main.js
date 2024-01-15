@@ -1,5 +1,6 @@
 import inject from './inject.js';
 import promise from './promise.js'
+import native from './native.js';
 import _ from './underscore.m.js';
 const wekf = {};
 // 注入underscore 里面的所有方法
@@ -8,6 +9,6 @@ _.each(_.methods(_), function(key) {
 })
 // 注入promise
 wekf.promise = promise
-
-// console.log(wekf);
+// 注入native
+wekf.native = native;
 export default wekf;
