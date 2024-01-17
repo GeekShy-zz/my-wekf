@@ -25,7 +25,6 @@ function getPreload(key) {
   } else if (runningTask[key]) {
     // 执行中
     const deferred = promise.defer();
-    const promise = deferred.promise;
     const task = runningTask[key];
     task.then(
       (data) => {
@@ -37,7 +36,7 @@ function getPreload(key) {
         deferred.reject(data);
       }
     );
-    return promise;
+    return deferred.promise;
   } else {
     throw new Error("current task not exist");
   }
