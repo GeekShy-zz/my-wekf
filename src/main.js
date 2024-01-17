@@ -11,7 +11,7 @@ _.each(_.methods(_), function(key) {
 // 注入promise
 wekf.promise = promise
 // 注入native
-wekf.native = native;
+wekf.wx = native;
 // 注入watcher
 wekf.watch = watch;
 wekf.unwatch = unwatch;
